@@ -4,35 +4,34 @@ RRDtool 2.x - Re-Engineering RRDtool for the next 15 Years
 
 =head1 CONTEXT
 
-In the last 15 years, RRDtool has become an integral part of many monitoring
-applications. Its applications have spread far and wide. Way beyond the
-initial vision. It is used in tiny embedded systems as well as huge
-enterprise monitoring systems with hundreds of thousands of data sources
-logging into round robin databases.
+Since its initial release in 1999, RRDtool has become an integral part of
+many monitoring applications. Its applications have spread far and wide. Way
+beyond the initial vision. RRDtool is used everywhere: in tiny embedded systems as well as
+in huge enterprise monitoring systems with hundreds of thousands of data
+sources.
 
 My main concerns when designing applications is to come up with simple and
 logical interfaces, covering all the necessary functionality and providing a
 path for further enhancement. This has worked very well with RRDtool 1.x,
-but there are some fundamental design elements that are not so easily
-changed.
+but there are some central design elements that are not so easily
+changed and are therefore blocking incremental development.
 
 =head1 VISION
 
-Part of the success of RRDtool is based on the fact, that a single package
+Part of the success of RRDtool is based on the fact that a single package
 takes care of all your time series data storage, retrieval and presentation
-needs. Any future version of RRDtool will do the same, but only more so. The
-main goal of the 2.x rewrite is to define clear internal APIs for the
+needs. Any future version of RRDtool will do the same, only more so.
+
+A prime objective of the 2.x rewrite is to create clear internal APIs for the
 interaction of the individual components of RRDtool. This will make it
 possible to replace or drastically modify one component without changes to
 the rest of the system. To some extent, this pattern was already present in
 RRDtool 1.x, but especially in the data storage layer the structure does not
 lend itself to extensions all that well.
 
-=head1 PROJECT
+=head1 DEVELOPMENT PLAN
 
-Rewriting RRDtool is a major software engineering effort. To get this done
-in a deterministic and orderly fashion, development will follow the
-following path:
+Rewriting RRDtool is a major software engineering effort. Here is the plan to achieve it.
 
 =over
 
@@ -46,7 +45,8 @@ Triage requirements
 
 =item 3.
 
-Create a coherent, modular design, down to the internal API level.
+Create and document a coherent, modular design, down to the internal API
+level.
 
 =item 4.
 
@@ -54,15 +54,15 @@ Plan and budget the implementation.
 
 =item 5.
 
-Launch a CrowdFunding project to raise the money for the implementation.
+Launch a Crowd-Funding project to raise the money for the implementation.
 
 =item 6.
 
-Implement
+Implement.
 
 =item 7.
 
-Release 2.x
+Release 2.0
 
 =back
 
@@ -88,6 +88,10 @@ API.
 A suitable Free Software License for RRDtool 2.x is to be determined based
 on feedback from the people financing the development. It could be GNU GPL
 V2, V3, GNU LGPL
+
+=head1 NOTE
+
+This document will evolve as the project takes shape.
 
 =head1 AUTHOR
 
