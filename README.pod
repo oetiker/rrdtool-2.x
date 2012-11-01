@@ -1,3 +1,9 @@
+=head1 NAME
+
+RRDtool 2.x - Re-Engineering RRDtool for the next 15 Years
+
+=head1 CONTEXT
+
 B<In the last 15 years, RRDtool has become an integral part of many monitoring applications.
 Its applications have spread far and wide. Way beyond the initial vision. It is used in tiny embedded systems as well as huge enterprise monitoring systems with hundreds of thousands of data sources logging into round robin databases.>
 
@@ -63,6 +69,6 @@ A suitable Free Software License for RRDtool 2.x is to be determined based on fe
 
 =head1 AUTHOR
 
-Tobi Oetiker E<lt>L<tobi@oetiker.ch>E<gt>
+Tobi Oetiker E<lt>L<mailto:tobi@oetiker.ch>E<gt>
 
 =cut
