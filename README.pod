@@ -5,8 +5,8 @@ RRDtool 2.x - Re-Engineering RRDtool for the next 15 Years
 =head1 CONTEXT
 
 Since its initial release in 1999, RRDtool has become an integral part of
-many monitoring applications. Its applications have spread far and wide. Way
-beyond the initial vision. RRDtool is used everywhere: in tiny embedded systems as well as
+many monitoring applications. Way
+beyond my initial vision. RRDtool is used everywhere: in tiny embedded systems as well as
 in huge enterprise monitoring systems with hundreds of thousands of data
 sources.
 
@@ -28,6 +28,31 @@ possible to replace or drastically modify one component without changes to
 the rest of the system. To some extent, this pattern was already present in
 RRDtool 1.x, but especially in the data storage layer the structure does not
 lend itself to extensions all that well.
+
+=head1 COMPONENTS
+
+=head2 Time Series Database
+
+The database component takes care of storeing timeseries data. Its api will allow to have
+alternate implementations provide the same service. Depening on the type of backend, different data preprocessing
+functionality may be present.
+
+=head2 Data Retrieval and Postprocessing
+
+This new component takes care of all data retrieval and postprocessing needs. DEF, CDEF and VDEF functionality from RRDtool 1.x will
+be located here, and be available to all data consumers.
+
+=head2 Graphing
+
+The graphing component draws the charts. Its structure will allow for mutliple chart types to be implemented.
+A version written in JavaScript will allow to have interactive charts in web applications,
+interacting directly with the data retrieval and postprocessing layer.
+
+=head2 Web API
+
+RRDtool should be able to run as a web service, providing a REST api to its functionality. Unfortunately this raises a bunch of
+dependency issues, for the actual webserver, authentication, encryption. Ideally, RRDtool itself would provide some minimal implementation
+of these, to be able to use it standalone.
 
 =head1 DEVELOPMENT PLAN
 
