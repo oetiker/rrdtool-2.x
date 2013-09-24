@@ -4,11 +4,10 @@ RRDtool 2.x - Re-Engineering RRDtool for the next 15 Years
 
 =head1 CONTEXT
 
-Since its initial release in 1999, RRDtool has become an integral part of
-many monitoring applications. Way
-beyond my initial vision. RRDtool is used everywhere: in tiny embedded systems as well as
-in huge enterprise monitoring systems with hundreds of thousands of data
-sources.
+Since its release in 1999, RRDtool has become an integral part of many
+monitoring applications.  Way beyond my initial vision.  RRDtool is used
+everywhere: in tiny embedded systems as well as in huge enterprise
+monitoring systems with hundreds of thousands of data sources.
 
 My main concerns when designing applications is to come up with simple and
 logical interfaces, covering all the necessary functionality and providing a
@@ -33,40 +32,39 @@ lend itself to extensions all that well.
 
 =head2 Time Series Database
 
-The database component takes care of storeing timeseries data. Its api will allow to have
-alternate implementations provide the same service. Depening on the type of backend, different data preprocessing
-functionality may be present.
+The database component stores time series data.
 
 =head2 Data Retrieval and Postprocessing
 
-This new component takes care of all data retrieval and postprocessing needs. DEF, CDEF and VDEF functionality from RRDtool 1.x will
-be located here, and be available to all data consumers.
+The Data Retrieval and Postprocessing component takes care of all data
+retrieval and postprocessing needs.  DEF, CDEF and VDEF functionality from
+RRDtool 1.x is located here, and is available to all data consumers.
 
 =head2 Graphing
 
-The graphing component draws the charts. Its structure will allow for mutliple chart types to be implemented.
-A version written in JavaScript will allow to have interactive charts in web applications,
-interacting directly with the data retrieval and postprocessing layer.
+The graphing component draws the charts. Its structure allow for mutliple chart types to be implemented.
 
 =head2 Web API
 
-RRDtool should be able to run as a web service, providing a REST api to its functionality. Unfortunately this raises a bunch of
-dependency issues, for the actual webserver, authentication, encryption. Ideally, RRDtool itself would provide some minimal implementation
-of these, to be able to use it standalone.
+RRDtool comes with a REST API. Unfortunately this raises a bunch of
+dependency issues, for the actual webserver, authentication, encryption. 
+Ideally, RRDtool itself would provide some minimal implementation of these,
+to be able to use it standalone.
 
 =head1 DEVELOPMENT PLAN
 
-Rewriting RRDtool is a major software engineering effort. Here is the plan to achieve it.
+Rewriting RRDtool is a major software engineering effort. Here is the plan
+to achieve it.
 
 =over
 
 =item 1.
 
-Collect requirements, using the GitHub Issue Tracker
+Collect requirements, using the L<GitHub Issue Tracker|https://github.com/oetiker/rrdtool-2.x/issues>.
 
 =item 2.
 
-Triage requirements
+Create Engineering Documents in the L<GitHub Wiki|https://github.com/oetiker/rrdtool-2.x/wiki>.
 
 =item 3.
 
@@ -79,7 +77,7 @@ Plan and budget the implementation.
 
 =item 5.
 
-Launch a Crowd-Funding project to raise the money for the implementation.
+Find financing. Large copr sponsors or crowd funding.
 
 =item 6.
 
@@ -120,6 +118,6 @@ This document will evolve as the project takes shape.
 
 =head1 AUTHOR
 
-Tobi Oetiker E<lt>L<mailto:tobi@oetiker.ch>E<gt>
+Tobi Oetiker E<lt>Ltobi@oetiker.chE<gt>
 
 =cut
